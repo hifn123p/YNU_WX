@@ -1,0 +1,49 @@
+<view class="container">
+    <!--绑定界面-->
+    <view class="login-from" wx:if="{{!isbind}}">
+        <!--账号-->
+        <view class="inputView">
+            <label class="loginLab">学号</label>
+            <input class="inputText" placeholder="请输入账号" bindinput="user" />
+        </view>
+        <view class="line"></view>
+
+        <!--密码-->
+        <view class="inputView">
+            <label class="loginLab">密码</label>
+            <input class="inputText" password="true" placeholder="请输入密码" bindinput="password" />
+        </view>
+
+        <view class="ys">
+            <view class="left">绑定前阅读并同意</view>
+            <view class="rigth">*隐私协议*</view>
+        </view>
+
+        <!--按钮-->
+        <view>
+            <button class='bind-btn' type="primary" size="default" loading="{{loading1}}" bindtap="login">绑定</button>
+        </view>
+    </view>
+
+    <!--个人信息 已绑定界面-->
+    <view class="login-from" wx:else>
+        <!--账号-->
+        <view class="inputView ">
+            <label class="loginLab ">学号</label>
+            <text class="inputText ">{{user}}</text>
+        </view>
+        <view class="line "></view>
+
+        <!--密码-->
+        <view class="inputView ">
+            <label class="loginLab ">姓名</label>
+            <text class="inputText ">{{stu_name}}</text>
+        </view>
+        <view class="line "></view>
+
+        <!--按钮-->
+        <view>
+            <button class='bind-btn' type="warn" size="default" loading="{{loading2}}" bindtap="loginout">解除绑定</button>
+        </view>
+    </view>
+</view>

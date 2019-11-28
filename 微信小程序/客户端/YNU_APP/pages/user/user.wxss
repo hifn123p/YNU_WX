@@ -1,0 +1,85 @@
+/* pages/user/user.wxss */
+
+page {
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 50rpx 0;
+    box-sizing: border-box;
+    background-color: #e6e6e6;
+}
+
+.userinfo {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.userinfo-avatar {
+    width: 128rpx;
+    height: 128rpx;
+    margin: 50rpx;
+    border-radius: 50%;
+}
+
+.userinfo-nickname {
+    color: #aaa;
+}
+
+button::after{
+border: none;
+}
+
+.loginbtn {
+    font-size: 32rpx;
+    border: none;
+    background-color: white;
+}
+
+.setting {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 80rpx;
+}
+
+.setting-item {
+    width: 100%;
+    padding: 30rpx;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30rpx;
+}
+
+.left {
+    margin-left: 20rpx;
+    font-size: 32rpx;
+    font-family: 'sans-serif';
+}
+
+.right {
+    margin-right: 20rpx;
+    font-size: 25rpx;
+    font-family: 'sans-serif';
+    color: #aaa;
+}
+
+.guanyu {
+    width: 90%;
+    background-color: white;
+    margin-top: 80rpx;
+    padding: 30rpx;
+    text-align: center;
+    font-size: 32rpx;
+}

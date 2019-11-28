@@ -1,0 +1,57 @@
+<!--校历查询-->
+<swiper  indicator-dots="true" autoplay="true" interval="5000" duration="1000">
+    <block wx:for="{{imgUrls}}">
+        <swiper-item>
+            <image catchtap='imgOnclick' data-url='{{item}}' src="{{item}}" class="slide-image" width="400" height="150" />
+        </swiper-item>
+    </block>
+</swiper>
+
+
+<view class='dongtai_text'>校园动态</view>
+
+<scroll-view class="all" scroll-y="true">
+
+    <!-- 校园动态-->
+    <view class="dongtai">
+
+        <view class="item" wx:for="{{list}}" wx:key="id">
+            <!--头部信息 头像 名字 日期 -->
+            <view class='item-head'>
+                <image class='avatar' src="{{item.avatarUrl}}" background-size="cover" />
+                <view class='item-info'>
+                    <view class='name'>{{item.nickname}}</view>
+                    <view class='date'>{{item.date}}</view>
+                </view>
+                <!-- 删除按钮 -->
+                <view class="{{item.type==1?'':'hide'}}">
+                    <image src="../../images/delete.png" class="delete" bindtap="clickDelete" id='{{item.id}}'></image>
+                </view>
+            </view>
+
+            <!-- 中间内容 -->
+            <navigator url="../comment/comment?r_id={{item.id}}&nickname={{item.nickname}}&avatarUrl={{item.avatarUrl}}&date={{item.date}}&content={{item.content}}&type={{item.type}}&comments={{item.comments}}">
+                <text class="item-content">{{item.content}}</text>
+            </navigator>
+
+            <!-- 底部内容 -->
+            <view class='item-foot'>
+                <!-- 评论 -->
+                <view class="bottomItemView">
+                    <navigator url="../comment/comment?r_id={{item.id}}&nickname={{item.nickname}}&avatarUrl={{item.avatarUrl}}&date={{item.date}}&content={{item.content}}&type={{item.type}}&comments={{item.comments}}">
+                        <image class="bottomItemImage" src="../../images/comment.png" />
+                    </navigator>
+
+                    <text class="bottomItemText">{{item.comments}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <div class='fixed-box'>
+        <view bindtap='pb'>
+            <image src="../../images/add.png"></image>
+        </view>
+    </div>
+
+</scroll-view>

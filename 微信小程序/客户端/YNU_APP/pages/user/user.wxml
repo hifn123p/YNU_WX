@@ -1,0 +1,33 @@
+<view class="container">
+    <view class="userinfo">
+        <!-- 头像部分 -->
+        <image wx:if="{{userInfo.avatarUrl}}" bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+        <image wx:else bindtap="bindViewTap" class="userinfo-avatar" src="/images/notlogin.png" background-size="cover"></image>
+        <!-- 名字部分 -->
+        <view class="userinfo-nickname">
+            <button class="loginbtn" wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 未登录 </button>
+            <block wx:elif="{{!msg}}">
+                <button class="loginbtn" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 未登录 </button>
+            </block>
+            <block wx:else>
+                <view class="userinfo-nickname">{{userInfo.nickName}}</view>
+            </block>
+        </view>
+    </view>
+
+    <view class="setting">
+        <view class="setting-item" bindtap='btnbind'>
+            <text class="left">绑定教务系统</text>
+            <text class="right">{{isbind}}</text>
+        </view>
+
+        <view class="setting-item" bindtap='clean'>
+            <text class="left">清除缓存</text>
+            <text class="right">{{storagesize}} kb</text>
+        </view>
+    </view>
+
+    <navigator class="guanyu" url="/pages/user_gy/user_gy">
+        <text>关于</text>
+    </navigator>
+</view>

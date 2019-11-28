@@ -1,0 +1,40 @@
+<!--周次  -->
+<view class="tab-top">
+  <view class="week-list">
+    <view wx:for="{{['一','二','三','四','五','六','日']}}" wx:key="*this" class="day-text">
+      <text>周{{item}}</text>
+    </view>
+  </view>
+</view>
+
+<scroll-view scroll-y="true" class="tab-scroll">
+  <view class="tab-container">
+    <!--分节-->
+    <view class="tab-divide">
+      <view wx:for="{{['上午', '下午', '晚上']}}" wx:key="*this" class="tab-divide-item">
+        <text>{{item}}</text>
+      </view>
+    </view>
+    <view class="tab-section">
+      <view wx:for="{{[1,2,3]}}" wx:key="*this" wx:for-index="index1"  class="tab-section-divide">
+        <view wx:for="{{[1,2,3,4]}}" wx:for-item="item2" wx:key="*this" class="tab-section-item">
+          <text>{{item2 + index1 * 4}}</text>
+        </view>
+      </view>
+    </view>
+
+    <!--线条-->
+    <view wx:for="{{[1,2,3,4,5,6,7,8,9,10,11,12]}}" wx:key="*this">
+      <view style="top:{{item*50}}px;" class="tab-line"></view>
+    </view>
+
+    <!--课程-->
+    <view wx:for="{{course}}" wx:key="id">
+      <view class="course-item" bindtap="showCardView" data-index="{{index}}" data-type="{{item.type}}" style="margin-left:{{(item.week-1)*90+1}}rpx;margin-top:{{(item.section_start-1)*50+1}}px;height:{{item.section_num*50-4}}px;">
+        <view class="course-item-inner" style="height:{{item.section_num*50-5}}px;background-color:{{colorArrays[index%9]}}">
+          <text>{{item.course_name}}\n{{item.room}}\n{{item.time}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</scroll-view>

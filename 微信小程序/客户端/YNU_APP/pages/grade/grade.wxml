@@ -1,0 +1,17 @@
+<!--pages/grade/grade.wxml-->
+<view class="table">
+  <view class="tr bg-w">
+    <view class="th">课程名</view>
+    <view class="th">分数</view>
+  </view>
+</view>
+<block wx:for="{{grade}}" wx:key="{{g_num}}">
+  <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+    <view class="td">{{item.g_name}}</view>
+    <view class="td">{{item.g_score}}</view>
+  </view>
+  <view class="tr" wx:else>
+    <view class="td">{{item.g_name}}</view>
+    <view class="td">{{item.g_score}}</view>
+  </view>
+</block>

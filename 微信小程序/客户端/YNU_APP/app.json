@@ -1,0 +1,49 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/publish/publish",
+        "pages/comment/comment",
+        "pages/user/user",
+        "pages/logs/logs",
+        "pages/user_bind/user_bind",
+        "pages/user_gy/user_gy",
+        "pages/course/course",
+        "pages/grade/grade"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "YNU课表",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "selectedColor": "#1296db",
+        "backgroundColor": "#e6e6e6",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "八卦校园",
+                "iconPath": "images/campus.png",
+                "selectedIconPath": "images/campus_1.png"
+            },
+            {
+                "pagePath": "pages/course/course",
+                "text": "课程表",
+                "iconPath": "images/course.png",
+                "selectedIconPath": "images/course_1.png"
+            },
+            {
+                "pagePath": "pages/grade/grade",
+                "text": "成绩单",
+                "iconPath": "images/grade.png",
+                "selectedIconPath": "images/grade_1.png"
+            },
+            {
+                "pagePath": "pages/user/user",
+                "text": "我",
+                "iconPath": "images/user.png",
+                "selectedIconPath": "images/user_1.png"
+            }
+        ]
+    }
+}

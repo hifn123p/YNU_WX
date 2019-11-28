@@ -1,0 +1,136 @@
+/* pages/course/course.wxss */
+.tab-top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 30px;
+  background: #E0FFFF;
+}
+
+.week-list {
+ display: flex;
+ flex-direction: row;
+ max-width: 100%;
+ height: 100%;
+ margin-left: 90rpx;
+}
+
+.day-text {
+  width: 95rpx;
+  height: 100%;
+  font-size: 30rpx;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.day-text.active {
+  background-color: #fe5700;
+}
+
+.day-text.active text {
+  color: #fff !important;
+}
+
+.day-text text:first-child {
+  color: #18191A;
+}
+
+.day-text text:last-child {
+  color: #7A7D80
+}
+
+.tab-scroll {
+  height: calc(100% - 50px - 20px);
+  z-index: 10;
+  position: fixed;
+  border-top: 1rpx solid #cacbcc;
+  background-color: #fff;
+}
+
+.tab-container {
+  height:600px;
+  width:750rpx;
+  display:flex;
+}
+
+.tab-divide {
+  background-color:#f6f6f6;
+  color:#7A7D80;
+}
+
+.tab-divide-item {
+  width: 53rpx;
+  height: 200px;
+  font-size: 28rpx;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  border-bottom: 1rpx solid #cacbcc;
+  border-right: 1rpx solid #cacbcc;
+  box-sizing: border-box;
+}
+
+.tab-divide-item text {
+  width: 24rpx;
+  line-height: 1.5;
+}
+
+.tab-section {
+  background-color:#f6f6f6;
+  color:#18191A;
+}
+
+.tab-section-divide {
+  width: 53rpx;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1rpx solid #cacbcc;
+  box-sizing: border-box;
+}
+
+.tab-section-item {
+  width: 53rpx;
+  height: 50px;
+  font-size: 28rpx;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.tab-line {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color:#cacbcc;
+  margin-top: -1px;
+}
+
+.course-item {
+  position: absolute;
+  width: 95rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.course-item-inner {
+  width: 88rpx;
+  border-radius: 3px;
+  font-size: 19rpx;
+  color: #fff;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: top;
+  align-items:center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.course-item-inner text:not(:last-child) {
+  margin-bottom: 6rpx;
+}

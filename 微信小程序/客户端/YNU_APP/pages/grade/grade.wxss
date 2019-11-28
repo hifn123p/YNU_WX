@@ -1,0 +1,35 @@
+/* pages/grade/grade.wxss */
+.table {
+  border: 0px solid darkgray;
+  width: 100%;
+  background-color: gray;
+}
+.tr {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 3rem;
+  align-items: center;
+  font-size: 32rpx;
+}
+.td {
+    width:50%;
+    justify-content: center;
+    text-align: center;
+}
+.bg-g{
+  background: #E6F3F9;
+}
+.bg-w{
+  background: snow;
+}
+.th {
+  width: 50%;
+  justify-content: center;
+  background: gray;
+  color: #fff;
+  display: flex;
+  height: 2rem;
+  align-items: center;
+  font-size: 32rpx;
+}

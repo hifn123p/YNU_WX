@@ -271,11 +271,11 @@ def main(usrname, password):
         {"g_category": "学位专业课", "g_num": "201730111095", "g_name": "计算机工程综合实践", "g_credit": "3", "g_score": "成绩未录入"},
         {"g_category": "专业选修课", "g_num": "2014111706010", "g_name": "模式识别", "g_credit": "2", "g_score": "90"}]}
 
-    if (usrname == '12017000783') & (password == '23039x'):
+    if (usrname == '') & (password == ''):
         dict = ren
-    elif (usrname == '12017000776') & (password == 'lyt18314522808'):
+    elif (usrname == '') & (password == ''):
         dict = lyt
-    elif (usrname == '12017000763') & (password == '271113'):
+    elif (usrname == '') & (password == ''):
         dict = el
     else:
         dict = {'msg': '0', 'stu_name': '', 'course': [], 'grade': []}
